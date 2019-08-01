@@ -4,7 +4,8 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="RGC.RGCProject.RGCLoginTest"/>
-      <class name="RGC.RGCProject.RegistrationTest"/>
+ 
+    
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
