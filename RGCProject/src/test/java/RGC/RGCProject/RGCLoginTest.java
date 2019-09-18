@@ -10,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Ignore;
 
 public class RGCLoginTest {
 	WebDriver driver;
@@ -20,14 +21,15 @@ public class RGCLoginTest {
   @Test(priority = 0)
   public void RGC_Login() {
 	  
-	 driver.findElement(By.xpath("//input[@id='ctl00_ContentPlaceHolder1_UserName']")).sendKeys("145645645454");
-	 driver.findElement(By.xpath("//input[@id='ctl00_ContentPlaceHolder1_Password']")).sendKeys("6959");
+	 driver.findElement(By.xpath("//input[@id='ctl00_ContentPlaceHolder1_UserName']")).sendKeys("919320022383");
+	 driver.findElement(By.xpath("//input[@id='ctl00_ContentPlaceHolder1_Password']")).sendKeys("5050");
 	 driver.findElement(By.xpath("//input[@id='ctl00_ContentPlaceHolder1_LoginImageButton']")).click();
 	 driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS); 
 	 logger.info("Login Success");
   }
   
   @Test(priority = 1)
+  
   public void RGC_Recharge() throws InterruptedException {
 	  driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);   
 	  driver.findElement(By.xpath("//li[@class='nav-header rechargeSuccess']//a[contains(text(),'Recharge')]")).click();
@@ -54,7 +56,7 @@ public class RGCLoginTest {
 	  	  
 	  System.setProperty("webdriver.chrome.driver","D:\\Selenium softwares 2019\\chromedriver.exe");
 	  driver=new ChromeDriver();
-	  driver.get("http://202.138.127.37/RGCPLUS_REVAMP/login");
+	  driver.get("https://www.relianceglobalcall.com/in/login");
 	  driver.manage().window().maximize();
 	  logger.info("RGC Site opened");
   }
